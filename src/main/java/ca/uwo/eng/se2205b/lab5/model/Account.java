@@ -8,8 +8,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 @ParametersAreNonnullByDefault
 public final class Account {
 
-    public Account() {
+    double balance;
 
+    public Account() {
+        balance =0;
     }
 
     /**
@@ -17,7 +19,7 @@ public final class Account {
      * @param transaction
      */
     public void addTransaction(Transaction transaction) {
-        // TODO SE2205B
+        balance += transaction.getAmount();
     }
 
     /**
@@ -25,6 +27,6 @@ public final class Account {
      * @return Current balance
      */
     public double getBalance() {
-        return 0.0;
+        return balance;
     }
 }

@@ -9,12 +9,9 @@ import java.util.Set;
 @ParametersAreNonnullByDefault
 public final class Bank {
 
-    Set<Account> myAccounts;
+//    TreeSet<Person,Set<Account>> temp = new ;
     public Bank() {
-
     }
-
-
     /**
      * Get all of the accounts for a person
      * @param person Person whom has an account
@@ -26,7 +23,8 @@ public final class Bank {
         if(person == null){
             throw new NullPointerException();
         }
-        return myAccounts;
+//        return myAccounts;
+        return null;
     }
 
     /**
@@ -40,7 +38,10 @@ public final class Bank {
         if(person == null){
             throw new NullPointerException();
         }
+        Account temp = new Account();
+//        myAccounts.add(temp);
         return null;
+//        return temp;
     }
 
     /**
