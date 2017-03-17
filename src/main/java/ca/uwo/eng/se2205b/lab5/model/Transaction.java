@@ -3,7 +3,6 @@ package ca.uwo.eng.se2205b.lab5.model;
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.concurrent.Immutable;
 import java.time.LocalDateTime;
-import java.util.Currency;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
@@ -13,11 +12,12 @@ import static com.google.common.base.Preconditions.checkNotNull;
 @ParametersAreNonnullByDefault @Immutable
 public final class Transaction {
 
+    //changed all amount to a double from currency....
     private final LocalDateTime dateTime;
 
-    private final Currency amount;
+    private final double amount;
 
-    public Transaction(LocalDateTime dateTime, Currency amount) {
+    public Transaction(LocalDateTime dateTime, double amount) {
         this.dateTime = checkNotNull(dateTime, "dateTime == null");
         this.amount = checkNotNull(amount, "amount == null");
     }
@@ -34,7 +34,7 @@ public final class Transaction {
      * The size of the transaction
      * @return
      */
-    public Currency getAmount() {
+    public double getAmount() {
         return amount;
     }
 }

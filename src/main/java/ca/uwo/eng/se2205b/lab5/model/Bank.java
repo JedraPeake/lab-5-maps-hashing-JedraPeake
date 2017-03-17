@@ -9,7 +9,7 @@ import java.util.Set;
 @ParametersAreNonnullByDefault
 public final class Bank {
 
-
+    Set<Account> myAccounts;
     public Bank() {
 
     }
@@ -23,7 +23,10 @@ public final class Bank {
      * @throws NullPointerException if {@code person} is {@code null}
      */
     public Set<Account> getAccounts(Person person) {
-        return null;
+        if(person == null){
+            throw new NullPointerException();
+        }
+        return myAccounts;
     }
 
     /**
@@ -34,6 +37,9 @@ public final class Bank {
      * @throws NullPointerException if {@code person} is {@code null}
      */
     public Account openAccount(Person person) {
+        if(person == null){
+            throw new NullPointerException();
+        }
         return null;
     }
 
@@ -46,6 +52,7 @@ public final class Bank {
      * @throws AccountCloseException if the Account can not be closed
      */
     public void closeAccount(Person person, Account account) throws AccountCloseException {
+
 
     }
 
